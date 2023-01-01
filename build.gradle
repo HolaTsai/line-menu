@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+}
+
+group 'com.hola'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // springboot
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.7.5'
+
+    // mybatis
+    implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.2.2'
+    runtimeOnly group: 'org.postgresql', name: 'postgresql', version: '42.5.0'
+
+    // line sdk
+    implementation 'com.linecorp.bot:line-bot-model:5.0.3'
+
+    // lombok
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+    testCompileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+    testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+
+    // common tool
+    implementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
+
+
+    // test
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.1'
+}
+
+test {
+    useJUnitPlatform()
+}

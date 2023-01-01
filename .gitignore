@@ -1,0 +1,16 @@
+# proj
+src/main/resources/application-*
+
+
+# build out
+build/
+out/
+
+# Gradle
+.gradle/
+
+# Intellij
+.idea/
+
+# Mac
+.DS_Store
